@@ -1,0 +1,25 @@
+﻿@model Matrix
+@{
+    ViewData["Title"] = "AgregarFilasyColumna";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Ejercicio</h1>
+    <h4>Tabla</h4>
+    <table class="table table-bordered table-responsive table-hover">
+    @for (var i = 0; i < Model.Matriz[0].Count; i++)
+    {
+        
+        <tr>
+            @for (var j = 0; j < Model.Matriz.Count; j++)
+            {
+                <td>
+                    @Model.Matriz[j][i];
+                </td>
+            }
+        </tr>
+    }
+    </table>
+    <h2>Total columna 3: @Model.TotalColumna31</h2>
+</div>
+
